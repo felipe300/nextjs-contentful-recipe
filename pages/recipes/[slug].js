@@ -2,6 +2,7 @@ import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
 // REGEX ^[a-z0-9]+(?:-[a-z0-9]+)*$
+// npm install @contentful/rich-text-react-renderer
 
 const client = createClient({
 	space: process.env.SPACE_ID,
@@ -35,6 +36,8 @@ export async function getStaticProps({ params }) {
 		props: {
 			recipe: items[0],
 		},
+		// incremental static Regeneration, time to check for changes, exmaple: 10 seconds
+		revalidate: 1,
 	};
 }
 
