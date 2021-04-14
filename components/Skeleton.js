@@ -1,10 +1,6 @@
 import React from 'react';
 
 const Skeleton = () => {
-	console.log(15 / 16);
-	console.log(500 / 16);
-	console.log(8 / 16);
-	console.log(1000 / 16);
 	return (
 		<div className='skeleton'>
 			<div className='s-banner'></div>
@@ -12,7 +8,7 @@ const Skeleton = () => {
 			<div className='s-content'></div>
 			<div className='s-content'></div>
 			<div className='s-content'></div>
-   
+
 			<style jsx>{`
 				.skeleton {
 					max-width: 75em;
