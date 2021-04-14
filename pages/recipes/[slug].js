@@ -25,7 +25,7 @@ export const getStaticPaths = async () => {
 		paths,
 		// Fallback Pages, update a 404 page, works with incremental static Regeneration.
 		// change from false (404 page, if not found) to true (reread getStaticProps, then check RecipeDetails)
-		fallback: false,
+		fallback: true,
 	};
 };
 
