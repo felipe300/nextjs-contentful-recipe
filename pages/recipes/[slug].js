@@ -1,6 +1,7 @@
 import { createClient } from 'contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import Image from 'next/image';
+import Skeleton from '../../components/Skeleton';
 // REGEX ^[a-z0-9]+(?:-[a-z0-9]+)*$
 // npm install @contentful/rich-text-react-renderer
 
@@ -22,6 +23,8 @@ export const getStaticPaths = async () => {
 
 	return {
 		paths,
+		// Fallback Pages, update a 404 page, works with incremental static Regeneration.
+		// change from false (404 page, if not found) to true (reread getStaticProps, then check RecipeDetails)
 		fallback: false,
 	};
 };
@@ -36,12 +39,15 @@ export async function getStaticProps({ params }) {
 		props: {
 			recipe: items[0],
 		},
-		// incremental static Regeneration, time to check for changes, exmaple: 10 seconds
+		// incremental static Regeneration, just update DO NOT CREATE
+		// time to check for changes, exmaple: 10 seconds
 		revalidate: 1,
 	};
 }
 
 const RecipeDetails = ({ recipe }) => {
+	if (!recipe) return <Skeleton />;
+
 	const { sys, fields } = recipe;
 	const { cookingTime, featuredImage, ingredients, method, title } = fields;
 	return (
