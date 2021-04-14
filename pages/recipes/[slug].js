@@ -38,7 +38,7 @@ export async function getStaticProps({ params }) {
 	if (!items.length) {
 		return {
 			redirect: {
-				destination: '/false',
+				destination: '/',
 				permanent: false,
 			},
 		};
