@@ -29,33 +29,33 @@ const RecipeCard = ({ cookingTime, slug, thumbnail, title }) => {
 					transform: rotateZ(-1deg);
 				}
 				.content {
-					background: #fff;
-					box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+					background: hsl(0, 0%, 100%);
+
 					margin: 0;
 					position: relative;
-					top: -40px;
-					left: -10px;
+					top: -2.5em;
+					left: -0.625em;
 				}
 				.info {
-					padding: 16px;
+					padding: 1em;
 				}
 				.info h4 {
-					margin: 4px 0;
+					margin: 0.25em 0;
 					text-transform: uppercase;
 				}
 				.info p {
 					margin: 0;
-					color: #777;
+					color: hsl(0, 0%, 47%);
 				}
 				.actions {
-					margin-top: 20px;
+					margin-top: 1.25em;
 					display: flex;
 					justify-content: flex-end;
 				}
 				.actions a {
-					color: #fff;
-					background: #f01b29;
-					padding: 16px 24px;
+					color: hsl(0, 0%, 100%);
+					background: hsl(356, 88%, 52%);
+					padding: 1em 1.5em;
 					text-decoration: none;
 				}
 			`}</style>

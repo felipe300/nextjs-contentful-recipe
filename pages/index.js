@@ -32,7 +32,7 @@ const Recipes = ({ recipes }) => {
 				.recipe-list {
 					display: grid;
 					grid-template-columns: 1fr 1fr;
-					grid-gap: 20px 60px;
+					grid-gap: 1.25em 3.75em;
 				}
 			`}</style>
 		</div>

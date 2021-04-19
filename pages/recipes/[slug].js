@@ -96,14 +96,14 @@ const RecipeDetails = ({ recipe }) => {
 				}
 				.banner h2 {
 					margin: 0;
-					background: #fff;
+					background: hsl(0, 0%, 100%);
 					display: inline-block;
-					padding: 20px;
+					padding: 1.25em;
 					position: relative;
-					top: -60px;
-					left: -10px;
+					top: -3.75em;
+					left: -0.625em;
 					transform: rotateZ(-1deg);
-					box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+					box-shadow: 0.0625px 0.1875px 0.3125px hsla(0, 0%, 0%, 0.1);
 				}
 				.info p {
 					margin: 0;
